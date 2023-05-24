@@ -4,6 +4,16 @@ import {key} from './key.ts'
 import * as contentful from 'contentful'
 const client = contentful.createClient(key)
 
+
+
 client.getEntries()
-.then((response) => console.log(response.items))
+.then((content) => {console.log(content.items)
+
+for (let i = 0; i < content.items.length; i++) {
+    const content2 : any = document.querySelector('.div')
+     content2.textContent = content.items[i].fields.bed
+}
+
+})
 .catch(console.error)
+

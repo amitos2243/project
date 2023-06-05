@@ -1,0 +1,20 @@
+{
+  "name": "alum_pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "contentful": "^10.2.0",
+    "contentful-management": "^10.35.3",
+    "contentful-ts-generator": "^0.2.10"
+  }
+}

@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+
+:root {
+  --main-color: #303030;
+  --grey: #666;
+  --light-bg: #eee;
+  --white: #fff;
+  --black: #1d1c1c;
+  --border: .1rem solid var(--grey);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  direction: rtl;
+  color: var(--light-bg);
+}
+
+
+/* ------------------------ navbar and logo ------------------------ */
+
+
+
+.banner .navbar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar img {
+  display: grid;
+  justify-content: center;
+}
+
+.navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-flex;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: var(--black);
+  font-size: 2rem;
+}
+
+
+/* ------------------------ homepage section & video ------------------------ */
+
+
+
+.video-container {
+  margin-top: 2rem;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homepage-video {
+  all: unset;
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+}
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+
+/* ------------------------ homepage section & video ------------------------ */
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 2rem 0 2rem 0;
+  place-items: center;
+}
+
+
+.homepage-cards h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.homepage-cards img {
+  width: 25rem;
+  height: 20rem;
+}
+
+.homepage-cards p {
+  font-size: 1.2rem;
+  width: 25rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.homepage-cards a {
+  color: var(--white);
+  background-color: var(--black);
+  padding: 1rem 1rem 1rem 1rem;
+  transition: 0.4s ease;
+}
+
+.homepage-cards a:hover {
+  color: var(--white);
+  background-color: var(--grey);
+}
+
+
+/* ------------------------ footer section ------------------------ */
+
+
+.footer .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border-top: var(--border);
+}
+
+.footer .flex .box {
+  flex: 1 1 30rem;
+}
+
+.footer .flex .box a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.footer .flex .box a span {
+  color: var(--main-color);
+}
+
+.footer .flex .box a:hover span {
+  text-decoration: underline;
+}
+
+.footer .flex .box a i {
+  color: var(--main-color);
+}
+
+.footer .flex .box:last-child {
+  text-align: right;
+}
+
+.footer .flex .box:last-child a i {
+  margin-left: 1.5rem;
+}
+
+
+.footer .flex .box:first-child a i {
+  margin-right: 1.5rem;
+}
+
+
+.footer .flex .box:nth-child(2) {
+  text-align: center;
+}
+
+.footer .credit {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: var(--border);
+  color: var(--main-color);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer .credit a {
+  color: var(--main-color);
+}
+
+.social {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+
+/* ------------------------ mediascreen ------------------------ */
+
+
+@media screen and (max-width: 1000px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards-container p {
+    width: 80%;
+  }
+}
